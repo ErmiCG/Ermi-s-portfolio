@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Home - Ermiyas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-anim" aria-hidden="true"></div>
+
+  <div class="header">
+    <div class="brand">
+      <div class="logo">EA</div>
+      <div>
+        <div style="font-size:14px;color:var(--muted)">My Portfolio</div>
+        <div style="font-size:12px;color:rgba(255,255,255,0.06)">Ermiyas-style • Dark</div>
+      </div>
+    </div>
+
+    <button class="menu-toggle" id="menuBtn" aria-expanded="false" aria-controls="mainNav">
+      ☰
+    </button>
+  </div>
+  <nav class="nav" id="mainNav" aria-label="Main navigation">
+    <a href="index.html" class="active"><span class="ic">🏠</span> <span class="label">Home</span></a>
+    <a href="about.html"><span class="ic">👤</span> <span class="label">About</span></a>
+    <a href="skills.html"><span class="ic">⚙️</span> <span class="label">Skills</span></a>
+    <a href="works.html"><span class="ic">🖼️</span> <span class="label">Works</span></a>
+    <a href="certificates.html"><span class="ic">📜</span> <span class="label">Certificates</span></a>
+    <a href="contact.html"><span class="ic">✉️</span> <span class="label">Contact</span></a>
+  </nav>
+
+  <main class="container" id="top">
+    <section class="hero">
+      <div class="hero-left">
+        <div class="typewriter">Discover, Build & Secure - I'm Ermiyas</div>
+        <div class="sub">I build clean interfaces, automate with code, love Linux, and I'm learning cybersecurity. HTML • CSS • JS • C++ • Python • Java</div>
+        <div class="cta">
+          <a class="btn" href="works.html">View Works</a>
+          <a class="btn ghost" href="contact.html">Get in touch</a>
+        </div>
+
+        <div style="margin-top:26px;">
+          <div class="section-title">Quick stats</div>
+          <div class="row">
+            <div class="card" style="width:180px;">
+              <div style="font-weight:800;color:var(--accent1)">10+</div>
+              <div style="color:var(--muted);margin-top:6px">Projects</div>
+            </div>
+            <div class="card" style="width:180px;">
+              <div style="font-weight:800;color:var(--accent2)">10k+</div>
+              <div style="color:var(--muted);margin-top:6px">Followers on TikTok</div>
+            </div>
+            <div class="card" style="width:180px;">
+              <div style="font-weight:800;color:#b3e6b6">Linux + windows</div>
+              <div style="color:var(--muted);margin-top:6px">Daily driver</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="card" style="width:380px; height:460px; display:flex; flex-direction:column; align-items:stretch; gap:12px;">
+          <div style="height:64%; background:linear-gradient(120deg, rgba(110,231,255,0.08), rgba(255,107,107,0.06)); border-radius:12px; overflow:hidden; display:flex; align-items:center; justify-content:center;">
+            <!-- hero artwork placeholder -->
+            <img src="images/me-again.jpg" alt="Hero art" style="width:100%; height:100%; object-fit:cover" />
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:center; padding:8px;">
+            <div>
+              <div style="font-weight:800">ErmiCG</div>
+              <div style="color:var(--muted); font-size:13px">This is me!</div>
+            </div>
+            <div style="font-weight:900; color:var(--accent1)">Hi!</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="popular" style="margin-top:10px">
+      <h3 id="popular" class="section-title">Some projectss</h3>
+      <div class="scroller card" role="list" aria-label="Popular works">
+        <!-- sample items -->
+        <div class="card-item" role="listitem"><img src="images/python.jpg" alt="Work 1"><div class="meta"><div>password generator</div><div>p1</div></div></div>
+        <div class="card-item" role="listitem"><img src="images/blender-project1.jpg" alt="Work 2"><div class="meta"><div>Blender Doghnut modeling</div><div>p2</div></div></div>
+        <div class="card-item" role="listitem"><img src="images/duality.jpg" alt="Work 3"><div class="meta"><div>Duality website</div><div>p3</div></div></div>
+        <div class="card-item" role="listitem"><img src="images/blackhole-blender.jpg" alt="Work 4"><div class="meta"><div>blackhole using blender</div><div>p4</div></div></div>
+        <div class="card-item" role="listitem"><img src="images/java.jpg" alt="Work 5"><div class="meta"><div>java uni-gate management sys</div><div>p5</div></div></div>
+      </div>
+    </section>
+
+    <section style="margin-top:22px">
+      <h3 class="section-title">Top Skills</h3>
+      <div class="card" style="padding:14px">
+        <div class="badges">
+          <div class="badge">HTML</div>
+          <div class="badge">CSS</div>
+          <div class="badge">JavaScript</div>
+          <div class="badge">C++</div>
+          <div class="badge">Python</div>
+          <div class="badge">Java</div>
+          <div class="badge">Linux</div>
+          <div class="badge">Cybersecurity</div>
+          <div class="badge">Blender animation</div>
+          <div class="badge">certified dancer</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      <div>© <strong>Ermiyas Aregawi, id-ugr/1880/70/16, section-2</strong> • Designed with code & coffee</div>
+      <div class="text-muted">Built with HTML & CSS</div>
+    </div>
+  </main>
+
+<script>
+  // menu toggle
+  const menuBtn = document.getElementById('menuBtn');
+  const nav = document.getElementById('mainNav');
+  menuBtn && menuBtn.addEventListener('click', ()=>{
+    const open = nav.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', open);
+  });
+</script>
+</body>
+</html>

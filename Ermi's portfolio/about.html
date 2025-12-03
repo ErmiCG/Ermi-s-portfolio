@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About - Ermiyas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-anim" aria-hidden="true"></div>
+
+  <div class="header">
+    <div class="brand">
+      <div class="logo">EA</div>
+      <div style="font-size:12px;color:var(--muted)">About</div>
+    </div>
+    <button class="menu-toggle" id="menuBtn2">☰</button>
+  </div>
+
+  <nav class="nav" id="mainNav2" aria-label="Main navigation">
+    <a href="index.html"><span class="ic">🏠</span> <span class="label">Home</span></a>
+    <a href="about.html" class="active"><span class="ic">👤</span> <span class="label">About</span></a>
+    <a href="skills.html"><span class="ic">⚙️</span> <span class="label">Skills</span></a>
+    <a href="works.html"><span class="ic">🖼️</span> <span class="label">Works</span></a>
+    <a href="certificates.html"><span class="ic">📜</span> <span class="label">Certificates</span></a>
+    <a href="contact.html"><span class="ic">✉️</span> <span class="label">Contact</span></a>
+  </nav>
+
+  <main class="container">
+    <section>
+      <h2 class="section-title">About Me</h2>
+
+      <div class="profile card">
+        <div class="photo">
+          <img src="images/me-again.jpg" alt="My photo">
+        </div>
+
+        <div style="flex:1">
+          <h3 style="margin:0 0 8px 0">Ermiyas Aregawi</h3>
+          <div class="text-muted">Third-year Computer Science • Linux enthusiast • Learning cybersecurity</div>
+
+          <p style="margin-top:12px;color:var(--muted)">
+          My name is Ermiyas Aregawi. <br>
+I live somewhere between code, science, and the quiet corners of thought where philosophy lives. I don’t see these things as separate worlds - they’re all different lenses pointing at the same question: how does everything actually work? <br>
+
+I’m a 3rd-year Computer Science student, but labels don’t really matter. What matters is the process - breaking systems apart, understanding their patterns, and putting them back together cleaner than before. I work with HTML, CSS, JavaScript, C++, Python, and Java. I use Linux because it feels honest. No illusions, no hand-holding. Just control. <br>
+
+I build things.<br>
+Sometimes it’s portfolio sites. Sometimes it’s sorting algorithms, Java security systems, network topologies, or complex recurrence relations no one asked for but I solve anyway. I configure routers, write logic, study vulnerabilities, and explore ethical hacking because the world makes more sense when you can see what hides underneath its surface. <br>
+
+Outside the terminal, I look for meaning in science - the mechanics of reality and in philosophy - the mechanics of the human mind. Both feel like debugging the universe.<brs>
+
+I’m also a creator in the real world. Over 10,000 people follow me on TikTok, watching the parts of me that don’t fit into code blocks or wiring diagrams.<br>
+
+My favorite animal is the owl. Not because it’s cute - but because it notices everything quietly.<br>
+
+This portfolio is just a window. A controlled leak.<br>
+A place where the digital version of me can breathe without interference.<br>
+
+Welcome.
+          </p>
+
+          <div style="margin-top:14px">
+            <a class="btn" href="works.html">See my works</a>
+            <a class="btn ghost" href="contact.html">Contact me</a>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="section-title" style="margin-top:20px">Experience & Education</h3>
+      <div class="card" style="padding:16px;">
+        <div style="display:flex;gap:18px;flex-wrap:wrap">
+          <div style="min-width:220px">
+            <div style="font-weight:800">University / College</div>
+            <div class="text-muted">Course • Years</div>
+          </div>
+          <div style="min-width:220px">
+            <div style="font-weight:800">Self-study</div>
+            <div class="text-muted">Web dev • Linux • python • Cybersec</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      <div><a href="index.html" style="color:var(--muted); text-decoration:none">← Back home</a></div>
+      <div class="text-muted"></div>
+    </div>
+    <div class="footer">
+      <div>© <strong>Ermiyas Aregawi, id-ugr/1880/70/16, section-2</strong> • Designed with code & coffee</div>
+      <div class="text-muted">Built with HTML & CSS</div>
+    </div>
+  </main>
+
+<script>
+  const menuBtn2 = document.getElementById('menuBtn2');
+  const nav2 = document.getElementById('mainNav2');
+  menuBtn2 && menuBtn2.addEventListener('click', ()=> nav2.classList.toggle('open'));
+</script>
+</body>
+</html>

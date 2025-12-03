@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Certificates - Ermiyas</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* subtle hover glow */
+    .cert img{ transition: transform .6s cubic-bezier(.2,.9,.3,1), box-shadow .3s }
+    .cert:hover img{ transform:scale(1.02); box-shadow: 0 18px 60px rgba(110,231,255,0.06) }
+  </style>
+</head>
+<body>
+  <div class="bg-anim" aria-hidden="true"></div>
+
+  <div class="header">
+    <div class="brand"><div class="logo">EA</div><div style="font-size:12px;color:var(--muted)">Certificates</div></div>
+    <button class="menu-toggle" id="menuBtn5">☰</button>
+  </div>
+
+  <nav class="nav" id="mainNav5" aria-label="Main navigation">
+    <a href="index.html"><span class="ic">🏠</span> <span class="label">Home</span></a>
+    <a href="about.html"><span class="ic">👤</span> <span class="label">About</span></a>
+    <a href="skills.html"><span class="ic">⚙️</span> <span class="label">Skills</span></a>
+    <a href="works.html"><span class="ic">🖼️</span> <span class="label">Works</span></a>
+    <a href="certificates.html" class="active"><span class="ic">📜</span> <span class="label">Certificates</span></a>
+    <a href="contact.html"><span class="ic">✉️</span> <span class="label">Contact</span></a>
+  </nav>
+
+  <main class="container">
+    <h2 class="section-title">Certificates</h2>
+
+    <p class="text-muted"></p>
+
+    <div class="certs">
+      <div class="cert card"><img src="images/c1.jpg" alt="Certificate 1"></div>
+      <div class="cert card"><img src="images/c2.jpg" alt="Certificate 2"></div>
+      <div class="cert card"><img src="images/cer.jpg" alt="Certificate 3"></div>
+    </div>
+
+    <div style="margin-top:18px" class="text-muted">this are some of the certificates i have, wanna see more?</div>
+
+    <div class="footer" style="margin-top:22px">
+      <div><a href="index.html" style="color:var(--muted); text-decoration:none">← Back</a></div>
+      <div class="text-muted"></div>
+    </div>
+    <div class="footer">
+      <div>© <strong>Ermiyas Aregawi, id-ugr/1880/70/16, section-2</strong> • Designed with code & coffee</div>
+      <div class="text-muted">Built with HTML & CSS</div>
+    </div>
+  </main>
+
+<script>
+  const menuBtn5 = document.getElementById('menuBtn5');
+  const nav5 = document.getElementById('mainNav5');
+  menuBtn5 && menuBtn5.addEventListener('click', ()=> nav5.classList.toggle('open'));
+</script>
+</body>
+</html>

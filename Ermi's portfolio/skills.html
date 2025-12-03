@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Skills - Ermiyas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-anim" aria-hidden="true"></div>
+
+  <div class="header">
+    <div class="brand"><div class="logo">EA</div><div style="font-size:12px;color:var(--muted)">Skills</div></div>
+    <button class="menu-toggle" id="menuBtn3">☰</button>
+  </div>
+
+  <nav class="nav" id="mainNav3" aria-label="Main navigation">
+    <a href="index.html"><span class="ic">🏠</span> <span class="label">Home</span></a>
+    <a href="about.html"><span class="ic">👤</span> <span class="label">About</span></a>
+    <a href="skills.html" class="active"><span class="ic">⚙️</span> <span class="label">Skills</span></a>
+    <a href="works.html"><span class="ic">🖼️</span> <span class="label">Works</span></a>
+    <a href="certificates.html"><span class="ic">📜</span> <span class="label">Certificates</span></a>
+    <a href="contact.html"><span class="ic">✉️</span> <span class="label">Contact</span></a>
+  </nav>
+
+  <main class="container">
+    <h2 class="section-title">Skills & Tools</h2>
+
+    <div class="card" style="padding:12px">
+      <div style="display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap">
+        <div>
+          <div style="font-weight:800;font-size:20px">Core Skills</div>
+          <div class="text-muted" style="margin-top:6px">Languages and tools I use frequently</div>
+          <div class="badges" style="margin-top:10px">
+            <div class="badge">HTML</div>
+            <div class="badge">CSS</div>
+            <div class="badge">JavaScript</div>
+            <div class="badge">C++</div>
+            <div class="badge">Python</div>
+            <div class="badge">Java</div>
+            <div class="badge">Blender for animation</div>
+          </div>
+        </div>
+
+        <div style="min-width:260px">
+          <div style="font-weight:800">Systems & Interests</div>
+          <div class="text-muted" style="margin-top:6px">I love using Linux and am starting in cybersecurity</div>
+          <div style="margin-top:10px">
+            <div class="badge">Linux</div>
+            <div class="badge">Bash</div>
+            <div class="badge">Networking</div>
+            <div class="badge">Cybersecurity</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="section-title" style="margin-top:18px">Projects Snapshot (scroll →)</h3>
+    <div class="scroller">
+      <!-- replace these images with screenshots of your projects -->
+      <div class="card-item"><img src="images/java.jpg" alt="Project photo 1"></div>
+      <div class="card-item"><img src="images/blender-project1.jpg" alt="Blender Project screenshot 2"></div>
+      <div class="card-item"><img src="images/python.jpg" alt="python project 3"></div>
+      <div class="card-item"><img src="images/duality.jpg" alt="website project"></div>
+      <div class="card-item"><img src="images/blackhole-blender.jpg" alt="blender project"></div>
+    </div>
+
+    <div style="margin-top:16px" class="text-muted">
+    </div>
+
+    <div class="footer" style="margin-top:22px">
+      <div><a href="index.html" style="color:var(--muted); text-decoration:none">← Home</a></div>
+      <div class="text-muted"></div>
+    </div>
+    <div class="footer">
+      <div>© <strong>Ermiyas Aregawi, id-ugr/1880/70/16, section-2</strong> • Designed with code & coffee</div>
+      <div class="text-muted">Built with HTML & CSS</div>
+    </div>
+  </main>
+
+<script>
+  const menuBtn3 = document.getElementById('menuBtn3');
+  const nav3 = document.getElementById('mainNav3');
+  menuBtn3 && menuBtn3.addEventListener('click', ()=> nav3.classList.toggle('open'));
+
+  // Make scroller draggable with mouse for smooth desktop scrolling
+  document.querySelectorAll('.scroller').forEach(scroller=>{
+    let isDown=false, startX, scrollLeft;
+    scroller.addEventListener('mousedown', e=>{
+      isDown=true; scroller.classList.add('active'); startX = e.pageX - scroller.offsetLeft; scrollLeft = scroller.scrollLeft;
+    });
+    document.addEventListener('mouseup', ()=> isDown=false);
+    document.addEventListener('mousemove', e=>{
+      if(!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - scroller.offsetLeft;
+      const walk = (x - startX) * 1.5;
+      scroller.scrollLeft = scrollLeft - walk;
+    });
+  });
+</script>
+</body>
+</html>

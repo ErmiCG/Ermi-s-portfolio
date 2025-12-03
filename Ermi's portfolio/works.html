@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Works - Ermiyas</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* highlight a big gallery layout for works */
+    .gallery-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap:18px; margin-top:12px; }
+    .gallery-card{ border-radius:14px; overflow:hidden; background:var(--card); height:320px; position:relative; }
+    .gallery-card img{ width:100%; height:100%; object-fit:cover; transition:transform .6s cubic-bezier(.2,.9,.3,1)}
+    .gallery-card:hover img{ transform:scale(1.06) }
+    .gallery-meta{ position:absolute; left:12px; bottom:12px; right:12px; display:flex; justify-content:space-between; align-items:center; background:linear-gradient(180deg, rgba(2,6,23,0.45), rgba(2,6,23,0.15)); padding:8px; border-radius:10px; }
+  </style>
+</head>
+<body>
+  <div class="bg-anim" aria-hidden="true"></div>
+
+  <div class="header">
+    <div class="brand"><div class="logo">EA</div><div style="font-size:12px;color:var(--muted)">Works</div></div>
+    <button class="menu-toggle" id="menuBtn4">☰</button>
+  </div>
+
+  <nav class="nav" id="mainNav4" aria-label="Main navigation">
+    <a href="index.html"><span class="ic">🏠</span> <span class="label">Home</span></a>
+    <a href="about.html"><span class="ic">👤</span> <span class="label">About</span></a>
+    <a href="skills.html"><span class="ic">⚙️</span> <span class="label">Skills</span></a>
+    <a href="works.html" class="active"><span class="ic">🖼️</span> <span class="label">Works</span></a>
+    <a href="certificates.html"><span class="ic">📜</span> <span class="label">Certificates</span></a>
+    <a href="contact.html"><span class="ic">✉️</span> <span class="label">Contact</span></a>
+  </nav>
+
+  <main class="container">
+    <h2 class="section-title">My Works</h2>
+
+    <div class="gallery-grid">
+      <div class="gallery-card"><img src="images/py-pro1.jpg" alt="Work 1"><div class="gallery-meta"><div>Noise detection and audio recording using python</div><div class="text-muted"></div></div></div>
+      <div class="gallery-card"><img src="images/ethio-web.png" alt="Work 2"><div class="gallery-meta"><div>Ethiopia Unveiled website</div><div class="text-muted"></div></div></div>
+      <div class="gallery-card"><img src="images/duality-web.jpg" alt="Work 3"><div class="gallery-meta"><div>Duality website</div><div class="text-muted"></div></div></div>
+      <div class="gallery-card"><img src="images/bl.jpg" alt="Work 4"><div class="gallery-meta"><div>blender work</div><div class="text-muted"></div></div></div>
+      <div class="gallery-card"><img src="images/java-j.jpg" alt="Work 5"><div class="gallery-meta"><div>java class project</div><div class="text-muted"></div></div></div>
+    </div>
+
+    <h3 class="section-title" style="margin-top:20px">Showcase (horizontal)</h3>
+    <div class="scroller card">
+      <!-- different aspect ratio shots -->
+      <div class="card-item" style="width:360px; height:200px"><img src="images/java.jpg" alt=""></div>
+      <div class="card-item" style="width:360px; height:200px"><img src="images/pyy.jpg" alt=""></div>
+      <div class="card-item" style="width:360px; height:200px"><img src="images/looow.jpg" alt=""></div>
+      <div class="card-item" style="width:360px; height:200px"><img src="images/nodes.jpg" alt=""></div>
+    </div>
+
+    <div class="footer" style="margin-top:20px">
+      <div><a href="index.html" style="color:var(--muted); text-decoration:none">← Home</a></div>
+      <div class="text-muted"></div>
+    </div>
+    <div class="footer">
+      <div>© <strong>Ermiyas Aregawi, id-ugr/1880/70/16, section-2</strong> • Designed with code & coffee</div>
+      <div class="text-muted">Built with HTML & CSS</div>
+    </div>
+  </main>
+
+<script>
+  const menuBtn4 = document.getElementById('menuBtn4');
+  const nav4 = document.getElementById('mainNav4');
+  menuBtn4 && menuBtn4.addEventListener('click', ()=> nav4.classList.toggle('open'));
+</script>
+</body>
+</html>

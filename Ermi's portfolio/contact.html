@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact - Ermiyas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-anim" aria-hidden="true"></div>
+
+  <div class="header">
+    <div class="brand"><div class="logo">EA</div><div style="font-size:12px;color:var(--muted)">Contact</div></div>
+    <button class="menu-toggle" id="menuBtn6">☰</button>
+  </div>
+
+  <nav class="nav" id="mainNav6" aria-label="Main navigation">
+    <a href="index.html"><span class="ic">🏠</span> <span class="label">Home</span></a>
+    <a href="about.html"><span class="ic">👤</span> <span class="label">About</span></a>
+    <a href="skills.html"><span class="ic">⚙️</span> <span class="label">Skills</span></a>
+    <a href="works.html"><span class="ic">🖼️</span> <span class="label">Works</span></a>
+    <a href="certificates.html"><span class="ic">📜</span> <span class="label">Certificates</span></a>
+    <a href="contact.html" class="active"><span class="ic">✉️</span> <span class="label">Contact</span></a>
+  </nav>
+
+  <main class="container">
+    <h2 class="section-title">Contact & Socials</h2>
+
+    <div class="contact-grid">
+      <div>
+        <form id="contactForm" class="card" style="padding:16px;">
+          <label class="text-muted">Message</label>
+          <textarea rows="6" class="input" placeholder="Write a quick message..."></textarea>
+
+          <div style="display:flex; gap:8px; margin-top:10px;">
+            <input class="input" placeholder="Your email" />
+            <input class="input" placeholder="Subject" />
+          </div>
+
+          <div style="margin-top:12px; display:flex; gap:10px;">
+            <button class="btn" type="button">Send</button>
+            <button class="btn ghost" type="button">Save draft</button>
+          </div>
+
+          <div style="margin-top:12px" class="text-muted"></div>
+        </form>
+      </div>
+
+      <aside class="card" style="padding:14px">
+        <h3 style="margin:0 0 8px 0">Find me on</h3>
+        <p class="text-muted"></p>
+
+        <div style="display:flex; flex-direction:column; gap:10px; margin-top:10px;">
+          <a class="btn ghost" href="https://github.com/ErmiCG" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn ghost" href="https://www.tiktok.com/@ermicgbe1371" target="_blank" rel="noopener">TikTok</a>
+          <a class="btn ghost" href="mailto:ermiyasaregawi527@gmail.com" target="_blank" rel="noopener">Email</a>
+        </div>
+
+        <div style="margin-top:12px" class="text-muted"></div>
+      </aside>
+    </div>
+
+    <div class="footer" style="margin-top:22px">
+      <div><a href="index.html" style="color:var(--muted); text-decoration:none">← Home</a></div>
+      <div class="text-muted"></div>
+    </div>
+    <div class="footer">
+      <div>© <strong>Ermiyas Aregawi, id-ugr/1880/70/16, section-2</strong> • Designed with code & coffee</div>
+      <div class="text-muted">Built with HTML & CSS</div>
+    </div>
+    
+  </main>
+
+<script>
+  const menuBtn6 = document.getElementById('menuBtn6');
+  const nav6 = document.getElementById('mainNav6');
+  menuBtn6 && menuBtn6.addEventListener('click', ()=> nav6.classList.toggle('open'));
+
+  // demo only: clicking send shows a toast (no backend)
+  document.querySelectorAll('.btn').forEach(btn=>{
+    if(btn.textContent.trim()==='Send'){
+      btn.addEventListener('click', ()=>{
+        btn.textContent='Sent ✓';
+        btn.disabled=true;
+        setTimeout(()=>{ btn.textContent='Send'; btn.disabled=false }, 1200);
+      });
+    }
+  });
+</script>
+</body>
+</html>
